@@ -1,0 +1,27 @@
+{
+  "name": "inlineText",
+  "description": "",
+  "parameters": [
+    {
+      "name": "title",
+      "label": "标题",
+      "widget": "input"
+    },
+    {
+      "name": "description",
+      "label": "描述",
+      "widget": "input"
+    },
+    {
+      "name": "options",
+      "label": "选项",
+      "widget": "list-input"
+    }
+  ],
+  "defaultData": {
+    "title": "单项选择",
+    "description": "告诉我你的最高学历, 我们只是想了解一下",
+    "value": "",
+    "options": ["高中", "大学", "硕士", "博士"]
+  }
+}

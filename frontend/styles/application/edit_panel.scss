@@ -1,0 +1,92 @@
+.edit-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  min-height: calc(100vh - 25px);
+  margin-top: 45px;
+  background-color: #fff;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    background-color: $blue;
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 14px;
+  }
+}
+
+.add-field {
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px;
+  }
+
+  a {
+    display: inline-block;
+    font-size: 14px;
+    width: 48%;
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #eee;
+    margin-bottom: 8px;
+    color: #000;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #fff;
+      background-color: $blue;
+      border-color: $blue;
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.edit-field {
+  &__control {
+    padding: 12px;
+  }
+
+  &__control-title {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  &__control-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__nil {
+    margin-top: 150px;
+    font-size: 14px;
+    padding: 50px;
+    text-align: center;
+    color: #aaa;
+  }
+
+  input {
+    width: 100%;
+    color: #595959;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid #eee;
+    transition: all 0.2s;
+
+    &:focus {
+      border-color: rgba(26, 156, 252, 0.7);
+      box-shadow: 0 0 0 2px rgba(27, 156, 252, 0.1);
+    }
+  }
+
+  .widget--list-input {
+    padding-left: 15px;
+  }
+}

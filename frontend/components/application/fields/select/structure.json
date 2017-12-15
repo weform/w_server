@@ -1,0 +1,22 @@
+{
+  "name": "inlineText",
+  "description": "",
+  "parameters": [
+    {
+      "name": "title",
+      "label": "标题",
+      "widget": "input"
+    },
+    {
+      "name": "options",
+      "label": "选项",
+      "widget": "list-input"
+    }
+  ],
+  "defaultData": {
+    "title": "下拉框",
+    "description": "",
+    "value": "北京",
+    "options": ["北京", "上海", "西安", "成都", "杭州", "天津"]
+  }
+}

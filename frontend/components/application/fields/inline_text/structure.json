@@ -1,0 +1,27 @@
+{
+  "name": "inlineText",
+  "description": "",
+  "parameters": [
+    {
+      "name": "title",
+      "label": "标题",
+      "widget": "input"
+    },
+    {
+      "name": "description",
+      "label": "描述",
+      "widget": "input"
+    },
+    {
+      "name": "placeholder",
+      "label": "Placeholder",
+      "widget": "input"
+    }
+  ],
+  "defaultData": {
+    "title": "单行文本",
+    "description": "请告诉我们你的大名或绰号都行",
+    "placeholder": "",
+    "value": ""
+  }
+}

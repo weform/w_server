@@ -1,0 +1,7 @@
+.widget {
+  &--list-input {
+    input:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}

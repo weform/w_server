@@ -1,0 +1,102 @@
+.field {
+  padding: 25px;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__description {
+    color: #C5C6C6;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  &__radio-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__text-input {
+    width: 250px;
+    padding: 5px 10px;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+  }
+
+  &__radio-label {
+    margin-left: 5px;
+  }
+
+  &__select {
+    width: 250px;
+    padding: 5px;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 2px;
+    background-color: #fff;
+
+    td, th {
+      border: 1px solid #D9D9D9;
+      font-weight: normal;
+      line-height: 2;
+    }
+
+    th {
+      background-color: #F3F3F3;
+    }
+  }
+}
+
+.field-wrapper {
+  position: relative;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #E6F5FE;
+  }
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+
+  &__delete {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    font-size: 12px;
+    display: none;
+    z-index: 11;
+    padding: 3px 5px;
+    background-color: #e3e3e3;
+  }
+
+  &.is-active {
+    .field-wrapper__mask {
+      border: 1px dashed #FD9153;
+    }
+
+    .field-wrapper__delete {
+      display: block;
+    }
+  }
+}
+
+.field--matrix-radio {
+  .field__title {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "inlineText",
+  "description": "",
+  "parameters": [
+    {
+      "name": "title",
+      "label": "标题",
+      "widget": "input"
+    },
+    {
+      "name": "labels",
+      "label": "题目",
+      "widget": "list-input"
+    },
+    {
+      "name": "options",
+      "label": "选项",
+      "widget": "list-input"
+    }
+  ],
+  "defaultData": {
+    "title": "矩阵单选",
+    "description": "",
+    "value": [
+      "1", "1", "0"
+    ],
+    "labels": ["沟通技巧", "时间观念", "技能熟练"],
+    "options": ["较差一些", "一般了", "还不错", "这是我的强项"]
+  }
+}
