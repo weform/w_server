@@ -1,0 +1,24 @@
+h1 注册
+
+- unless @user.errors.empty?
+  - @user.errors.messages.values.flatten.each do |error|
+    = error
+
+= form_for :users, url: users_path, method: :post do |f|
+  .form-group
+    = f.label :email
+      | 邮箱
+    .field
+      = f.text_field :email
+  .form-group
+    = f.label :password
+      | 密码
+    .field
+      = f.password_field :password
+  .form-group
+    = f.label :password_confirmation
+      | 密码确认
+    .field
+      = f.password_field :password_confirmation
+  .form-group
+    = f.submit '创建用户'

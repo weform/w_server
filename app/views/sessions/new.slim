@@ -1,0 +1,15 @@
+h1 登陆
+p= flash[:notice]
+= form_for :sessions, url: sessions_path, method: :post do |f|
+  .form-group
+    = f.label :email
+      | 邮箱
+    .field
+      = f.text_field :email
+  .form-group
+    = f.label :password
+      | 密码
+    .field
+      = f.password_field :password
+  .form-group
+    = f.submit '登陆'
