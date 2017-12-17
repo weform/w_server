@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user = login(params[:sessions][:email], params[:sessions][:password])
       render json: { msg: '登陆成功', status: 'ok', user: gain_current_user }, status: 200
     else
-      format.json { render json: { msg: '登陆失败', status: 'error', user: gain_current_user }, status: 401 }
+      render json: { msg: '登陆失败', status: 'error', user: gain_current_user }, status: 401
     end
   end
 

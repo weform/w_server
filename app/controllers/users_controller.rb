@@ -8,10 +8,9 @@ class UsersController < ApplicationController
     # @user = User.new(params.require(:user)
     #      .permit(:email, :password, :password_confirmation))
     if @user.save
-      flash['notice'] = '注册成功'
-      redirect_to root_path
+      render json: { msg: '注册成功', status: 'ok' }, status: 200
     else
-      render action: :new
+      render json: { msg: '注册失败', status: 'error' }, status: 401
     end
   end
 

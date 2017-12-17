@@ -1,5 +1,6 @@
 import React from 'react'
 import Login from '../account/Login'
+import Signup from '../account/Signup'
 import _ from 'lodash'
 
 class Header extends React.PureComponent {
@@ -48,7 +49,11 @@ class Header extends React.PureComponent {
             登陆
           </a>
           <span>/</span>
-          <a className="header__login" href="javascript:;">
+          <a
+            className="header__login"
+            href="javascript:;"
+            onClick={() => actions.openModal(<Signup actions={actions} />)}
+          >
             注册
           </a>
         </div>
