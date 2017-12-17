@@ -1,5 +1,3 @@
-import $ from 'jquery'
-
 /* modal */
 export const openModal = (Component, effect) => {
   $('body').addClass('open-modal-layer')

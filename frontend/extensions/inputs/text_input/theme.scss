@@ -1,0 +1,36 @@
+.text-input {
+  outline: none;
+  line-height: 2;
+  padding: 3px 8px;
+  border-width: 1px;
+  border-radius: 3px;
+  font-size: 14px;
+  resize: none;
+
+  &__wrapper {
+    display: block;
+  }
+
+  &.is-pass {
+    input {
+      border-color: green;
+    }
+  }
+
+  &.is-default {
+    input {
+      border: 1px solid #000;
+      transition: all 0.3s;
+
+      &:focus {
+        border: 1px solid #eee;
+      }
+    }
+  }
+
+  &.is-error {
+    input {
+      border-color: red;
+    }
+  }
+}

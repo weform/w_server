@@ -1,8 +1,9 @@
-@import '~normalize.css';
-@import './base.scss';
+// common
+@import '../common/index.scss';
 
-//
-@import './header.scss';
+// shared
+@import '../shared/header/header.scss';
+@import '../shared/account/login.scss';
 
 .work-panel {
   width: 100%;

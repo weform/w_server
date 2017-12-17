@@ -2,11 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { validation } from 'value-validate'
 
+import './theme.scss'
+
 class TextInput extends React.Component {
   static defaultProps = {
     value: '',
     disabled: false,
-    className: '',
+    className: null,
     onChange: () => {}
   }
 
@@ -28,22 +30,21 @@ class TextInput extends React.Component {
   }
 
   render () {
-    const { value, disabled, name } = this.props
+    const { value, disabled, name, placeholder, className } = this.props
     const { status, msg } = this.state
 
-    const inputElementProps = {
-      name,
-      onChange: this.changeHandle,
-      disabled,
-      value
-    }
-
-    const messageElement = <div className="message">{msg}</div>
+    const messageElement = <div className="u-message">{msg}</div>
 
     return (
-      <div className="">
-        <div className="">
-          {React.createElement('input', inputElementProps)}
+      <div className={`text-input is-${status} ${className || ''}`}>
+        <div className="text-input__wrapper">
+          <input
+            name={name}
+            placeholder={placeholder}
+            onChange={this.changeHandle}
+            disabled={disabled}
+            value={value}
+          />
         </div>
         { status !== 'default' ? messageElement : '' }
       </div>
@@ -54,7 +55,6 @@ class TextInput extends React.Component {
 TextInput.propTypes = {
   name: PropTypes.string,
   className: PropTypes.string,
-  disabled: PropTypes.bool,
   onChange: PropTypes.func,
   value: PropTypes.oneOfType([
     PropTypes.number,

@@ -1,6 +1,5 @@
 body.open-modal-layer {
   overflow-y: hidden;
-  padding-right: 15px;
 }
 
 .modal-layer {
@@ -9,8 +8,8 @@ body.open-modal-layer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 100px;
+    min-height: 100px;
     z-index: 100;
 
     &.slide-switch-enter,

@@ -3,11 +3,10 @@ import update from 'immutability-helper'
 
 import reduxWrapper from 'store/reduxWrapper'
 
-import Modal from 'extensions/modal/Modal'
-
-import Header from './shared/Header'
 import WorkPanel from './work_panel/WorkPanel'
 import EditPanel from './edit_panel/EditPanel'
+
+import layouts from '../layouts'
 
 class Main extends React.Component {
   state = {
@@ -58,7 +57,6 @@ class Main extends React.Component {
   constructor (props) {
     super(props)
     this.toActiveFiled = this.toActiveFiled.bind(this)
-    console.log(this)
   }
 
   toActiveFiled = (index) => {
@@ -71,13 +69,12 @@ class Main extends React.Component {
   }
 
   render () {
-    const { actions, modal } = this.props
+    console.log(this.props)
 
     return (
-      <div>
-        <Header actions={actions} />
-        <Modal {...modal} closeModal={actions.closeModal} />
-      </div>
+      <layouts.Application>
+        <div>123</div>
+      </layouts.Application>
     )
   }
 }

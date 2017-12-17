@@ -10,5 +10,9 @@
     "no-new": 0,
     "no-multiple-empty-lines": 0,
     "jsx-quotes": ["error", "prefer-double"]
+  },
+  "globals": {
+    "$": true,
+    "gon": true
   }
 }

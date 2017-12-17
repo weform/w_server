@@ -1,26 +1,33 @@
 class SessionsController < ApplicationController
   before_action :auth_user, except: [:destroy]
+  after_action :set_csrf_headers, only: [:create, :destroy]
 
   def new
   end
 
   def create
     if user = login(params[:sessions][:email], params[:sessions][:password])
-      flash[:notice] = '登陆成功'
-      redirect_to root_path
+      render json: { msg: '登陆成功', status: 'ok', user: gain_current_user }, status: 200
     else
-      flash[:notice] = "邮箱或者密码错误"
-      redirect_to new_session_path
+      format.json { render json: { msg: '登陆失败', status: 'error', user: gain_current_user }, status: 401 }
     end
   end
 
   def destroy
     logout
-    flash[:notice] = "退出登陆"
-    redirect_to root_path
+    render json: { msg: '退出成功', status: 'ok', user: gain_current_user }, status: 200
+  end
+
+  protected
+  def set_csrf_headers
+    if request.xhr?
+      response.headers['X-CSRF-Param'] = request_forgery_protection_token.to_s
+      response.headers['X-CSRF-Token'] = form_authenticity_token
+    end
   end
 
   private
+
   def auth_user
     if logged_in?
       redirect_to root_path
