@@ -4927,6 +4927,12 @@ react-redux@^5.0.6:
     loose-envify "^1.1.0"
     prop-types "^15.5.10"
 
+react-s-alert@^1.3.2:
+  version "1.3.2"
+  resolved "http://registry.npm.taobao.org/react-s-alert/download/react-s-alert-1.3.2.tgz#56d8453428d56f22a240eb014d2020d3f62ea984"
+  dependencies:
+    babel-runtime "^6.23.0"
+
 react-transition-group@^1.2.0:
   version "1.2.1"
   resolved "http://registry.npm.taobao.org/react-transition-group/download/react-transition-group-1.2.1.tgz#e11f72b257f921b213229a774df46612346c7ca6"

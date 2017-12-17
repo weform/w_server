@@ -1,6 +1,8 @@
 import React from 'react'
 import Login from '../account/Login'
 import Signup from '../account/Signup'
+
+import Alert from 'react-s-alert'
 import _ from 'lodash'
 
 class Header extends React.PureComponent {
@@ -10,13 +12,11 @@ class Header extends React.PureComponent {
       url: '/logout'
     })
       .done(data => {
-        console.log(data)
+        Alert.success(data.msg)
+        this.props.actions.updateCurrentUser({...data.user})
       })
-      .fail(error => {
-        console.log(error)
-      })
-      .always(xhr => {
-        this.props.actions.updateCurrentUser({...xhr.user})
+      .fail(xhr => {
+        Alert.error(xhr.responseJSON.msg)
       })
   }
 

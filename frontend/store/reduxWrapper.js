@@ -20,7 +20,6 @@ const reduxWrapper = Component => {
   ))(Component)
 
   const Wrapper = props => {
-    console.log(props)
     return (
       <Provider store={store}>
         <NewComponent {...props} />

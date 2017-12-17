@@ -1,6 +1,8 @@
 import React from 'react'
 import TextInput from 'extensions/inputs/text_input/TextInput'
 
+import Alert from 'react-s-alert'
+
 class Login extends React.Component {
   state = {
     email: '',
@@ -24,13 +26,10 @@ class Login extends React.Component {
     })
       .done(data => {
         this.props.actions.closeModal()
+        Alert.success(data.msg)
       })
-      .fail(error => {
-        console.log('error', error)
-      })
-      .always(xhr => {
-        console.log(xhr)
-        // this.props.actions.updateCurrentUser({...xhr.user})
+      .fail(xhr => {
+        Alert.error(xhr.responseJSON.msg)
       })
   }
 
