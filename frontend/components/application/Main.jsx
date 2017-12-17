@@ -1,5 +1,4 @@
 import React from 'react'
-import { render } from 'react-dom'
 import update from 'immutability-helper'
 
 import Header from './shared/Header'
@@ -71,19 +70,6 @@ class Main extends React.Component {
     return (
       <div>
         <Header />
-        <section className="main">
-          <WorkPanel
-            data={this.state.data}
-            toActiveFiled={this.toActiveFiled}
-            toUpdate={this.toUpdate}
-            activeFiledIndex={this.state.activeFiledIndex}
-          />
-          <EditPanel
-            data={this.state.data}
-            toUpdate={this.toUpdate}
-            activeFiledIndex={this.state.activeFiledIndex}
-          />
-        </section>
       </div>
     )
   }

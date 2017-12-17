@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__logo">
-        金数据
+        VForm 微表单
       </div>
       <div className="header__right">
         <a className="header__button" href="javascript:;">
