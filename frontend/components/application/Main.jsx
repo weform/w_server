@@ -1,6 +1,10 @@
 import React from 'react'
 import update from 'immutability-helper'
 
+import reduxWrapper from 'store/reduxWrapper'
+
+import Modal from 'extensions/modal/Modal'
+
 import Header from './shared/Header'
 import WorkPanel from './work_panel/WorkPanel'
 import EditPanel from './edit_panel/EditPanel'
@@ -67,12 +71,15 @@ class Main extends React.Component {
   }
 
   render () {
+    const { actions, modal } = this.props
+
     return (
       <div>
-        <Header />
+        <Header actions={actions} />
+        <Modal {...modal} closeModal={actions.closeModal} />
       </div>
     )
   }
 }
 
-export default Main
+export default reduxWrapper(Main)
