@@ -36,6 +36,7 @@ class Header extends React.PureComponent {
           >
             退出
           </a>
+          <a className="header__login" href="/account">个人中心</a>
         </div>
       )
     } else {

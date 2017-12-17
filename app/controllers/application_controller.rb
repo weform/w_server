@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :gain_gon
+  before_action :gain_gon, :set_headers
 
   private
 
@@ -10,6 +10,12 @@ class ApplicationController < ActionController::Base
 
   def gain_current_user
     user = current_user && { :email => current_user[:email] }
+  end
+
+  def set_headers
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Cache-Control'] = 'no-cache, no-store'
+    response.headers['Expires'] = '0'
   end
 
   def gain_gon

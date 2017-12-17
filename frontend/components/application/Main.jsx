@@ -69,6 +69,7 @@ class Main extends React.Component {
   }
 
   render () {
+    console.log(13)
     return (
       <layouts.Application>
         <div>123</div>
