@@ -6,11 +6,10 @@ html lang="en"
     meta http-equiv="X-UA-Compatible" content="ie=edge"
     = display_meta_tags(default_meta_tags)
     = csrf_meta_tags
-    = stylesheet_pack_tag "application"
+    = stylesheet_pack_tag "account"
   body id=page_id
     = yield
-    / = javascript_include_tag 'application'
-    = Gon::Base.render_data
+
     script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"
     script src="https://cdn.bootcss.com/jquery-ujs/1.2.2/rails.min.js"
-    = javascript_pack_tag "application"
+    = javascript_pack_tag "account"

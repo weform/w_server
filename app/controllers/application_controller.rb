@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def require_login
+    raise StandardError unless current_user
+  end
+
   def gain_current_user
     user = current_user && { :email => current_user[:email] }
   end

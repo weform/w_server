@@ -18,15 +18,14 @@ class SessionsController < ApplicationController
     render json: { msg: '退出成功', status: 'ok', user: gain_current_user }, status: 200
   end
 
-  protected
+  private
+
   def set_csrf_headers
     if request.xhr?
       response.headers['X-CSRF-Param'] = request_forgery_protection_token.to_s
       response.headers['X-CSRF-Token'] = form_authenticity_token
     end
   end
-
-  private
 
   def auth_user
     if logged_in?

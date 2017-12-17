@@ -1,5 +1,6 @@
 module ApplicationHelper
   def default_meta_tags
+
     title = @seo.try(:[], :title) || 'Artcus'
     des = @seo.try(:[], :des) || 'site_desc'
     keywords = @seo.try(:[], :keywords) || 'Artcus'

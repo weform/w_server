@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy', as: :logout
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
+
+  get 'account' => 'account#index'
+  get 'account/*path' => 'account#index', constraints: ->(r) { r.format.html? }
 end
