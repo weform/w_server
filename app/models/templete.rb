@@ -1,0 +1,2 @@
+class Templete < ApplicationRecord
+end

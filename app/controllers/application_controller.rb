@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def gain_current_user
-    user = current_user && { :email => current_user[:email] }
+    current_user && current_user.slice(:email, :id)
   end
 
   def set_headers
