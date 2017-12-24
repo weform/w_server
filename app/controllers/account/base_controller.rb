@@ -1,4 +1,4 @@
-class AccountController < ApplicationController
+class Account::BaseController < ApplicationController
   before_action :require_login, :load_user
   layout 'account'
 

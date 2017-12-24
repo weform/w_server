@@ -1,12 +1,15 @@
 import React from 'react'
 import update from 'immutability-helper'
 
-import reduxWrapper from 'store/reduxWrapper'
+import reduxWrapper from './store/reduxWrapper'
+import Alert from 'react-s-alert'
+
+import Modal from 'extensions/modal/Modal'
+
+import Header from './Header'
 
 import WorkPanel from './work_panel/WorkPanel'
 import EditPanel from './edit_panel/EditPanel'
-
-import layouts from '../layouts'
 
 class Main extends React.Component {
   state = {
@@ -69,11 +72,15 @@ class Main extends React.Component {
   }
 
   render () {
-    console.log(13)
+    const { actions, modal, currentUser } = this.props
+
     return (
-      <layouts.Application>
+      <div>
+        <Header actions={actions} currentUser={currentUser} />
         <div>123</div>
-      </layouts.Application>
+        <Alert stack={{ limit: 3 }} timeout={3000} position="top-left" effect="bouncyflip" />
+        <Modal {...modal} closeModal={actions.closeModal} />
+      </div>
     )
   }
 }

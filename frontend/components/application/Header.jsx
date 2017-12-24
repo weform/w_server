@@ -1,6 +1,6 @@
 import React from 'react'
-import Login from '../account/Login'
-import Signup from '../account/Signup'
+import Login from './Login'
+import Signup from './Signup'
 
 import Alert from 'react-s-alert'
 import _ from 'lodash'

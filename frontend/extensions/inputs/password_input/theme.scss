@@ -1,0 +1,19 @@
+.password-input {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__eye-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #979797;
+    text-decoration: none;
+    cursor: pointer;
+
+    &.is-active {
+      color: blue;
+    }
+  }
+}

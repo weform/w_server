@@ -18,10 +18,7 @@
     "transform-object-rest-spread",
     "transform-decorators-legacy",
     [
-      "transform-class-properties",
-      {
-        "spec": true
-      }
+      "transform-class-properties"
     ]
   ]
 }

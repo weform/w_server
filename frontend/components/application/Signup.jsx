@@ -1,13 +1,14 @@
 import React from 'react'
 import TextInput from 'extensions/inputs/text_input/TextInput'
+import RippleButton from 'extensions/buttons/ripple_button/RippleButton'
+import PasswordInput from 'extensions/inputs/password_input/PasswordInput'
 
 import Alert from 'react-s-alert'
 
-class Login extends React.Component {
+class Signup extends React.Component {
   state = {
     email: '',
-    password: '',
-    password_confirmation: ''
+    password: ''
   }
 
   changeHandle = (name, value) => {
@@ -21,7 +22,7 @@ class Login extends React.Component {
       data: {
         'users[email]': this.state.email,
         'users[password]': this.state.password,
-        'users[password_confirmation]': this.state.password_confirmation
+        'users[password_confirmation]': this.state.password
       }
     })
       .done(data => {
@@ -40,30 +41,26 @@ class Login extends React.Component {
           <TextInput
             value={this.state.email}
             className="login__input"
-            placeholder="电子邮箱/手机号"
+            label="电子邮箱/手机号"
             onChange={value => this.changeHandle('email', value)}
           />
-          <TextInput
-            placeholder="密码"
+          <PasswordInput
+            label="密码"
             className="login__input"
             value={this.state.password}
             onChange={value => this.changeHandle('password', value)}
           />
-          <TextInput
-            placeholder="密码"
-            className="login__input"
-            value={this.state.password_confirmation}
-            onChange={value => this.changeHandle('password_confirmation', value)}
-          />
-          <a
+          <RippleButton
             className="login__button"
             href="javascript:;"
             onClick={this.toSignup}
-          >立即注册</a>
+          >
+            立即注册
+          </RippleButton>
         </div>
       </div>
     )
   }
 }
 
-export default Login
+export default Signup

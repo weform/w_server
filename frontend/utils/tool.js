@@ -1,3 +1,5 @@
+import UUID from 'uuid-js'
+
 /**
  *
  * @param {Array} belongto
@@ -25,4 +27,13 @@ export const objRelation = (belongto, filed) => {
       return obj
     }
   }
+}
+
+
+/**
+  *
+  */
+export const addUidForUrl = url => {
+  const symbol = /\?/.test(url) ? '&' : '?'
+  return `${url}${symbol}_=${UUID.create()}`
 }

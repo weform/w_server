@@ -1,5 +1,9 @@
 import React from 'react'
 import TextInput from 'extensions/inputs/text_input/TextInput'
+import PasswordInput from 'extensions/inputs/password_input/PasswordInput'
+
+import RippleButton from 'extensions/buttons/ripple_button/RippleButton'
+
 import Alert from 'react-s-alert'
 
 class Login extends React.Component {
@@ -37,21 +41,24 @@ class Login extends React.Component {
         <div className="login__left">
           <TextInput
             value={this.state.account}
+            type="text"
             className="login__input"
-            placeholder="电子邮箱/手机号"
+            label="电子邮箱/手机号"
             onChange={value => this.changeHandle('account', value)}
           />
-          <TextInput
-            placeholder="密码"
+          <PasswordInput
+            label="密码"
             className="login__input"
             value={this.state.password}
             onChange={value => this.changeHandle('password', value)}
           />
-          <a
+          <RippleButton
             className="login__button"
             href="javascript:;"
             onClick={this.toLogin}
-          >登陆</a>
+          >
+            立即登陆
+          </RippleButton>
         </div>
       </div>
     )

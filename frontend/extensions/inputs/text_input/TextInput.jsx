@@ -1,36 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { validation } from 'value-validate'
+import Input from 'react-toolbox/lib/input'
 
 import './theme.scss'
 
 class TextInput extends React.Component {
-  static defaultProps = {
-    value: '',
-    disabled: false,
-    className: null,
-    onChange: () => {}
-  }
-
   state = {
     status: 'default',
     msg: ''
   }
 
-  changeHandle = e => {
+  changeHandle = value => {
     const { rules, onChange } = this.props
-    const newValue = e.target.value
-    onChange(newValue)
+    onChange(value)
 
     if (typeof rules === 'undefined') return
-    validation(newValue, rules, result => {
+    validation(value, rules, result => {
       const { isPass, msg } = result
       this.setState({ msg, status: isPass ? 'pass' : 'error' })
     })
   }
 
   render () {
-    const { value, disabled, name, placeholder, className } = this.props
+    const { value, disabled, name, label, className, multiline, hint } = this.props
     const { status, msg } = this.state
 
     const messageElement = <div className="u-message">{msg}</div>
@@ -38,18 +31,29 @@ class TextInput extends React.Component {
     return (
       <div className={`text-input is-${status} ${className || ''}`}>
         <div className="text-input__wrapper">
-          <input
+          <Input
+            type="text"
             name={name}
-            placeholder={placeholder}
+            label={label}
+            hint={hint}
             onChange={this.changeHandle}
             disabled={disabled}
+            multiline={multiline}
             value={value}
+            error={status === 'error'}
           />
         </div>
-        { status !== 'default' ? messageElement : '' }
+        { status === 'error' ? messageElement : '' }
       </div>
     )
   }
+}
+
+TextInput.defaultProps = {
+  value: '',
+  disabled: false,
+  className: null,
+  onChange: () => {}
 }
 
 TextInput.propTypes = {

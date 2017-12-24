@@ -1,0 +1,116 @@
+.column-title {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+
+  h3 {
+    display: inline-block;
+    margin: 0;
+    color: #303f9f;
+  }
+
+  span {
+    padding-left: 5px;
+  }
+
+  .column-title__tip {
+    font-size: 14px;
+    color: #919191;
+    line-height: 28px;
+  }
+}
+
+.text-label {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.loading {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+
+  .step {
+    text-align: center;
+    padding: 0 20px;
+
+    &.active {
+      color: rgb(63, 81, 181);
+    }
+  }
+
+  .step-num {
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+}
+
+
+.send-code-input-wrapper {
+  position: relative;
+}
+
+.send-code-input {
+
+}
+
+button.send-code-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  right: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.sudo-identify {
+  .sudo-identify-warn {
+    margin-bottom: 10px;
+    color: $blue;
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .identify-wrapper {
+
+  }
+
+  .identify-item {
+    display: flex;
+    font-weight: bold;
+    color: #000;
+
+    .iconfont {
+      font-weight: normal;
+      font-size: 22px;
+      margin-right: 5px;
+      color: $orange;
+    }
+  }
+
+  .identify-item-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .handover-btn {
+    margin-left: 30px;
+    color: $orange;
+  }
+}
+
+div.wx-login-modal {
+  width: auto;
+}
