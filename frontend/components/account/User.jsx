@@ -5,14 +5,14 @@ import { observer, inject } from 'mobx-react'
 
 const User = inject('profiles')(observer(
   ({ profiles, children }) => {
-    const { avatar, username } = profiles.user
+    const { avatar } = profiles.user
     return (
       <div className="user sidebar__user">
         <div className="user__avatar">
-          <img src={avatar} alt={username} />
+          <img src={avatar} alt={profiles.username} />
         </div>
         <div className="user__intro">
-          <div className="user__name">{username}</div>
+          <div className="user__name">{profiles.username}</div>
         </div>
         {children}
       </div>

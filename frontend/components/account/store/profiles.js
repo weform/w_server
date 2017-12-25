@@ -6,6 +6,8 @@ class Store {
     username: ''
   }
 
+  @observable username = ''
+
   @action fetch = () => {
     $.ajax({
       url: '/account/profiles',
@@ -15,6 +17,7 @@ class Store {
         console.log(result)
         runInAction(() => {
           this.user = result.user
+          this.username = result.user.username
         })
       })
   }

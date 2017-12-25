@@ -6,7 +6,7 @@ const Nav = () => {
     <nav className="nav sidebar__nav">
       <ul>
         <li>
-          <RippleLink to="/profile" activeClassName="active">
+          <RippleLink to="/profiles" activeClassName="active">
             <i className="iconfont icon-userinfo" />
             <span className="nav_title">基本信息</span>
           </RippleLink>
