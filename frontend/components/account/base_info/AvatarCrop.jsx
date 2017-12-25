@@ -47,7 +47,7 @@ class AvatarCrop extends React.Component {
 }
 
 AvatarCrop.propTypes = {
-  croper: PropTypes.object.isRequired,
+  croper: PropTypes.object,
   crop: PropTypes.func.isRequired
 }
 

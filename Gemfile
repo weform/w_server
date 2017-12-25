@@ -25,6 +25,8 @@ gem 'jbuilder'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'carrierwave', '~> 1.0'
+
 gem 'gon'
 gem 'slim'
 gem 'sorcery'

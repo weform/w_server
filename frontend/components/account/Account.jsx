@@ -19,7 +19,7 @@ import { addUidForUrl } from 'utils/tool'
 import User from './User'
 import Nav from './Nav'
 
-import Base from './main/Base'
+import Profiles from './main/Profiles'
 // import Security from './main/Security'
 // import Authorizations from './main/Authorizations'
 
@@ -65,10 +65,10 @@ class Account extends React.Component {
             <Col md={9} xs={12}>
               <Switch>
                 <Route exact path="/" render={() => <Redirect to="/profiles" />} />
-                <Route path="/profiles" component={Base} />
+                <Route path="/profiles" component={Profiles} />
                 {/* <Route path="/security" component={Security} /> */}
                 {/* <Route path="/authorizations" component={Authorizations} /> */}
-                {/* <Route path="/*" render={() => <Redirect to="/profile" />} /> */}
+                <Route path="/*" render={() => <Redirect to="/profiles" />} />
               </Switch>
             </Col>
           </Row>

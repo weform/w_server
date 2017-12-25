@@ -27,7 +27,7 @@ ColumnTitle.defaultProps = {
 ColumnTitle.propTypes = {
   title: PropTypes.string,
   en: PropTypes.string,
-  tip: PropTypes.string.isRequired
+  tip: PropTypes.string
 }
 
 export default ColumnTitle
