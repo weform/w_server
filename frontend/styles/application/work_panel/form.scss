@@ -1,17 +1,11 @@
 .form {
-  width: 65%;
+  width: 85%;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   overflow: hidden;
   margin-bottom: 80px;
-
-  &__header {
-    background-color: $blue;
-    color: #fff;
-    padding: 13px 25px;
-  }
 
   &__title {
     padding: 18px 25px;

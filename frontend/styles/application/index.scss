@@ -2,17 +2,13 @@
 @import '../common/index.scss';
 
 // shared
-@import '../shared/header/header.scss';
-@import '../shared/account/login.scss';
+@import './header/header.scss';
+@import '../shared/session/login.scss';
 
-.work-panel {
-  width: 100%;
-  padding-top: 80px;
-  padding-right: 280px;
-}
-
+//widget
 @import './widget.scss';
-@import './edit_panel.scss';
 
-@import './work_panel/form.scss';
-@import './work_panel/field.scss';
+//panel
+@import './edit_panel/index.scss';
+@import './widget_panel/index.scss';
+@import './work_panel/index.scss';

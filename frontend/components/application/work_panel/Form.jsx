@@ -41,7 +41,6 @@ const Form = ({ data, toActiveFiled, activeFiledIndex, toUpdate }) => {
 
   return (
     <div className="form">
-      <div className="form__header">欢迎你加入金数据</div>
       <div className="form__title">个人登记表单</div>
       {formList}
       <button className="form__submit" type="submit" >提交</button>

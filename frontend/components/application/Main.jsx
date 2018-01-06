@@ -8,6 +8,7 @@ import Modal from 'extensions/modal/Modal'
 
 import Header from './Header'
 
+import WidgetPanel from './widget_panel/WidgetPanel'
 import WorkPanel from './work_panel/WorkPanel'
 import EditPanel from './edit_panel/EditPanel'
 
@@ -77,7 +78,22 @@ class Main extends React.Component {
     return (
       <div>
         <Header actions={actions} currentUser={currentUser} />
-        <div>123</div>
+        <WidgetPanel
+          data={this.state.data}
+          toUpdate={this.toUpdate}
+          activeFiledIndex={this.state.activeFiledIndex}
+        />
+        <WorkPanel
+          data={this.state.data}
+          toActiveFiled={this.toActiveFiled}
+          toUpdate={this.toUpdate}
+          activeFiledIndex={this.state.activeFiledIndex}
+        />
+        <EditPanel
+          data={this.state.data}
+          toUpdate={this.toUpdate}
+          activeFiledIndex={this.state.activeFiledIndex}
+        />
         <Alert stack={{ limit: 3 }} timeout={3000} position="top-left" effect="bouncyflip" />
         <Modal {...modal} closeModal={actions.closeModal} />
       </div>
