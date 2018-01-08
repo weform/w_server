@@ -54,6 +54,8 @@ group :development do
   #use pry for debug and replace the default rails console
   gem 'pry-rails'
   gem 'awesome_print'
+  # DB structure
+  gem 'annotate'
 
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
