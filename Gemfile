@@ -25,6 +25,9 @@ gem 'jbuilder'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Use dotenv for envs
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+
 gem 'carrierwave', '~> 1.0'
 
 gem 'gon'
@@ -64,6 +67,7 @@ group :development do
 
   gem 'capistrano', '~> 3.6'
   gem 'capistrano-rails', '~> 1.3'
+  gem 'capistrano-bundler', '~> 1.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
