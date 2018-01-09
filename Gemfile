@@ -34,6 +34,7 @@ gem 'gon'
 gem 'slim'
 gem 'sorcery'
 gem 'meta-tags'
+gem 'unicorn'
 
 gem 'react-rails', '~> 2.4.3'
 gem 'webpacker', '~> 3.1.1'
