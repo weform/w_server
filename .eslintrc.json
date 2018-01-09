@@ -13,6 +13,7 @@
   },
   "globals": {
     "$": true,
-    "gon": true
+    "gon": true,
+    "WxLogin": true
   }
 }

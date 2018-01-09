@@ -10,6 +10,7 @@ const EditField = ({ data, activeFiledIndex, toUpdate }) => {
     editContent = getEditInterface(data[activeFiledIndex], activeFiledIndex, toUpdate)
   }
 
+
   return (
     <div className="edit-field edit-panel__module">
       <div className="edit-panel__title">编辑字段</div>

@@ -113,3 +113,16 @@ export const dataURLtoFile = (dataurl, filename) => {
 export const redirect = url => {
   window.location.href = url
 }
+
+// init wechat login
+export const initWxLogin = id => {
+  return new WxLogin({
+    id: id || 'wx-login-qrcode',
+    appid: 'wx8c9a93acb12e2b2d',
+    scope: 'snsapi_login',
+    redirect_uri: `${location.origin}/auth/wechat/callback`,
+    state: '',
+    style: '',
+    href: ''
+  })
+}
