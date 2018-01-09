@@ -1,14 +1,14 @@
 module ApplicationHelper
   def default_meta_tags
 
-    title = @seo.try(:[], :title) || 'Artcus'
+    title = @seo.try(:[], :title) || 'Weform'
     des = @seo.try(:[], :des) || 'site_desc'
-    keywords = @seo.try(:[], :keywords) || 'Artcus'
+    keywords = @seo.try(:[], :keywords) || 'Weform'
     image = @seo.try(:[], :image) || ''
     reverse = @seo.try(:[], :reverse).nil? ? true : false
 
     {
-      site: 'Artcus',
+      site: 'Weform',
       title: title,
       reverse: reverse,
       description: des,

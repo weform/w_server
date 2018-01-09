@@ -1,5 +1,5 @@
 {
-  "name": "artcus_server",
+  "name": "w_server",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.1.1",
